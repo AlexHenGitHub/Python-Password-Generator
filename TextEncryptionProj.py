@@ -5,8 +5,18 @@
 
 import random
 
+
+# Get user input
 userinput = input("Type anything: ")
 
-print(userinput)
+# Convert the input into a list of characters
+char_list = list(userinput)
 
+# Shuffle the list of characters
+random.shuffle(char_list)
 
+# Join the shuffled list back into a string
+scrambled_output = ''.join(char_list)
+
+# Print the scrambled output
+print("Scrambled Output:", scrambled_output)
