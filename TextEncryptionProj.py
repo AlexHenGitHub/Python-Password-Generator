@@ -6,9 +6,17 @@
 import random
 
 
+
+
 # Get user input
 userinput = input("Type anything: ")
+if userinput:
+    key = random.randint(-10000000000000000000000000000*10000000000000000000000000000,
+                         10000000000000000000000000000 * 10000000000000000000000000000)
 
+    print(key)
+
+'''
 # Convert the input into a list of characters
 char_list = list(userinput)
 
@@ -20,3 +28,5 @@ scrambled_output = ''.join(char_list)
 
 # Print the scrambled output
 print("Scrambled Output:", scrambled_output)
+print()
+'''
