@@ -2,10 +2,7 @@
 #Purpose of this program is to do basic text encryption
 #Data: 11/18/2024
 
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import yfinance as yf
+
 import random
 
 from numpy.lib.user_array import container
@@ -46,7 +43,18 @@ while True:
 
 
 
+#Text
+Label(root, text='PASSWORD GENERATOR').grid(column=0, row=1, ipady=10, ipadx=285)
+# Filler
+Label(root).grid(column=1, row=2, ipady=30)
+Label(root).grid(column=2, row=3, ipady=30)
+Label(root).grid(column=3, row=4, ipady=30)
 
+# slider
+slider = Scale(root, from_=0, to=100, length=400, resolution=1, orient=HORIZONTAL)
+slider.grid(column=0, row=3, ipady=30)
+#special character question
+Label(root, text='How many characters you want?').grid(column=0, row=3)
 
 ## need a way to see how the text was changed and track it
 
