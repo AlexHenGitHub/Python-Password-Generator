@@ -5,11 +5,48 @@
 
 import random
 
-from numpy.lib.user_array import container
+import tkinter as tk
 
+def display_input():
+    # Get the text from the entry box
+    user_text = entry.get()
+    # Update the label with the user's input
+    output_label.config(text=f"You typed: {user_text}")
+
+# Create the main window
+root = tk.Tk()
+root.title("Simple Python GUI")
+root.geometry("300x200")  # Set window size
+
+# Add a label for instructions
+label = tk.Label(root, text="Type something and click Submit:")
+label.pack(pady=10)
+
+# Add an entry widget for user input
+entry = tk.Entry(root, width=30)
+entry.pack(pady=5)
+
+# Add a button to trigger the display_input function
+button = tk.Button(root, text="Submit", command=display_input)
+button.pack(pady=10)
+
+# Add a label to display the output
+output_label = tk.Label(root, text="", fg="blue")
+output_label.pack(pady=10)
+
+# Start the Tkinter event loop
+root.mainloop()
+
+
+
+
+
+
+
+'''   
 while True:
 
-# Get user input
+    # Get user input
     userinput = input("Type anything: ")
 
     # Shuffle the list of characters
@@ -22,43 +59,23 @@ while True:
     scrambled_output = ''.join(char_list)
 
     if userinput:
-        key = random.randint(-10000000000000000000000000000*10000000000000000000000000000,
-                         10000000000000000000000000000 * 10000000000000000000000000000)
+        key = random.randint(-10000000000000000000000000000 * 10000000000000000000000000000,
+                             10000000000000000000000000000 * 10000000000000000000000000000)
     print(key)
     print()
     print("Scrambled Output:", scrambled_output, "non scrambled input:", userinput)
     userinput
 
-
     again = input("Do you want to go again 1 = yes, 0 = no")
 
-
-
-    if again == "1" :
+    if again == "1":
         continue
 
     else:
         print("End")
         break
-
-
-
-#Text
-Label(root, text='PASSWORD GENERATOR').grid(column=0, row=1, ipady=10, ipadx=285)
-# Filler
-Label(root).grid(column=1, row=2, ipady=30)
-Label(root).grid(column=2, row=3, ipady=30)
-Label(root).grid(column=3, row=4, ipady=30)
-
-# slider
-slider = Scale(root, from_=0, to=100, length=400, resolution=1, orient=HORIZONTAL)
-slider.grid(column=0, row=3, ipady=30)
-#special character question
-Label(root, text='How many characters you want?').grid(column=0, row=3)
-
+'''
 ## need a way to see how the text was changed and track it
-
-
 
 
 ## maybe make an if statment that compares input vs scambled text aand that
