@@ -5,7 +5,7 @@ from tkinter import *
 import random
 
 root = Tk()
-root.title('Password Generator')
+root.title('Password Generator') #title of the window
 root.geometry("720x480")  # window size
 
 password_list = [
